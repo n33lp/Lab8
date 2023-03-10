@@ -1,6 +1,7 @@
 package com.example.lab8;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,4 +59,12 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
+
+    public int hasCity(City city) {
+        for (int i=0; i < cities.size();i++){
+            if(city == cities.get(i)){
+                return 1;}
+        }
+        return 0;
+    }
 }
